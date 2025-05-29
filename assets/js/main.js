@@ -1,34 +1,34 @@
 const produtosLinha1 = [
-    { nome: "Goma Arco-Íris", preco: 4.99, imagem: "assets/img/goma1.jpg" },
-    { nome: "Dentaduras Fini", preco: 3.50, imagem: "assets/img/dentadura.jpg" },
-    { nome: "Ursinhos Azedos", preco: 5.25, imagem: "assets/img/ursinhos.jpg" },
-    { nome: "Tubes Morango", preco: 6.00, imagem: "assets/img/tubes.jpg" },
-    { nome: "Balas Cítricas", preco: 3.99, imagem: "assets/img/balas.jpg" },
-    { nome: "Anéis Azedos", preco: 4.75, imagem: "assets/img/aneis.jpg" },
-    { nome: "Torcidas Frutas", preco: 5.50, imagem: "assets/img/torcidas.jpg" },
-    { nome: "Mini Marshmallow", preco: 4.20, imagem: "assets/img/marshmallow.jpg" },
+    { nome: "Goma arco-íris", preco: 4.99, imagem: "assets/img/goma1.jpg" },
+    { nome: "Dentaduras fini", preco: 3.50, imagem: "assets/img/dentadura.jpg" },
+    { nome: "Goma de ursinhos", preco: 5.25, imagem: "assets/img/ursinhos.jpg" },
+    { nome: "Tubes morango", preco: 6.00, imagem: "assets/img/tubes.jpg" },
+    { nome: "Balas cítricas", preco: 3.99, imagem: "assets/img/balas.jpg" },
+    { nome: "Anéis azedos", preco: 4.75, imagem: "assets/img/aneis.jpg" },
+    { nome: "Torcidas frutas", preco: 5.50, imagem: "assets/img/torcidas.jpg" },
+    { nome: "Mini marshmallow", preco: 4.20, imagem: "assets/img/marshmallow.jpg" },
   ];
   
   const produtosLinha2 = [
-    { nome: "Goma Coca-Cola", preco: 4.80, imagem: "assets/img/coca.jpg" },
-    { nome: "Pêssego Azedo", preco: 4.50, imagem: "assets/img/pessego.jpg" },
-    { nome: "Banana Docinha", preco: 3.99, imagem: "assets/img/banana.jpg" },
-    { nome: "Morango Delícia", preco: 5.00, imagem: "assets/img/morango.jpg" },
-    { nome: "Coração Gelado", preco: 4.90, imagem: "assets/img/coracao.jpg" },
-    { nome: "Brilho Cereja", preco: 5.10, imagem: "assets/img/cereja.jpg" },
-    { nome: "Fini Melancia", preco: 3.75, imagem: "assets/img/melancia.jpg" },
-    { nome: "Doce Bananinha", preco: 3.60, imagem: "assets/img/bananinha.jpg" },
+    { nome: "Algodão doce", preco: 4.80, imagem: "assets/img/algodao.jpg" },
+    { nome: "Beijos morango", preco: 4.50, imagem: "assets/img/beijos.jpg" },
+    { nome: "Bala amoras", preco: 3.99, imagem: "assets/img/amoras.jpg" },
+    { nome: "Sorvetinho fini", preco: 5.00, imagem: "assets/img/sorvetinho.jpg" },
+    { nome: "Coração gelado", preco: 4.90, imagem: "assets/img/coracao.jpg" },
+    { nome: "Minhocas azedas", preco: 5.10, imagem: "assets/img/minhocas.jpg" },
+    { nome: "Fini melancia", preco: 3.75, imagem: "assets/img/melancia.jpg" },
+    { nome: "Doce bananinha", preco: 3.60, imagem: "assets/img/bananinha.jpg" },
   ];
   
   const produtosLinha3 = [
-    { nome: "Rosquinha Açucarada", preco: 4.20, imagem: "assets/img/rosquinha.jpg" },
-    { nome: "Goma de Ursinho", preco: 4.00, imagem: "assets/img/ursinhos2.jpg" },
-    { nome: "Torcidas Neon", preco: 6.50, imagem: "assets/img/torcidas2.jpg" },
-    { nome: "Fini Dente de Vampiro", preco: 3.85, imagem: "assets/img/vampiro.jpg" },
-    { nome: "Doces Explosivos", preco: 5.75, imagem: "assets/img/explosivos.jpg" },
-    { nome: "Gelatinoso Rainbow", preco: 4.60, imagem: "assets/img/rainbow.jpg" },
-    { nome: "Picolé de Gelatina", preco: 5.99, imagem: "assets/img/picole.jpg" },
-    { nome: "Cenoura Doce", preco: 3.30, imagem: "assets/img/cenoura.jpg" },
+    { nome: "Lacta diamante negro", preco: 4.20, imagem: "assets/img/diamantenegro" },
+    { nome: "Lacta chocolate branco", preco: 4.00, imagem: "assets/img/lakabranco.webp" },
+    { nome: "Lacta oreo", preco: 6.50, imagem: "assets/img/lakaoreo.webp"},
+    { nome: "Lacta caramelo", preco: 3.85, imagem: "assets/img/lakacaramelo.webp" },
+    { nome: "Lacta chocolate preto", preco: 5.75, imagem: "assets/img/Lakapreto.webp" },
+    { nome: "Lacta shot", preco: 4.60, imagem: "assets/img/lakashot.webp" },
+    { nome: "Lacta ouro branco", preco: 5.99, imagem: "assets/img/lakaourobranco.webp" },
+    { nome: "Lacta sonho de valsa", preco: 3.30, imagem: "assets/img/lakasonhodevalsa.webp" },
   ];
   
   function criarCarrossel(produtos, idContainer) {
