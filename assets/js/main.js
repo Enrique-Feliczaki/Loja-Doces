@@ -1,3 +1,4 @@
+// Listas de produtos organizadas por linha para os carrosséis
 const produtosLinha1 = [
   { nome: "Goma arco-íris", preco: 4.99, imagem: "assets/img/goma1.jpg" },
   { nome: "Dentaduras fini", preco: 3.50, imagem: "assets/img/dentadura.jpg" },
@@ -31,13 +32,14 @@ const produtosLinha3 = [
   { nome: "Lacta sonho de valsa", preco: 3.30, imagem: "assets/img/lakasonhodevalsa.webp" },
 ];
 
-// Função para criar os carrosséis
+// Função que cria o carrossel, dividindo os produtos em grupos de 4 por slide
 function criarCarrossel(produtos, idContainer) {
   const container = document.getElementById(idContainer);
   const porSlide = 4;
 
   for (let i = 0; i < produtos.length; i += porSlide) {
     const grupo = produtos.slice(i, i + porSlide);
+
     const item = document.createElement("div");
     item.className = `carousel-item${i === 0 ? " active" : ""}`;
 
@@ -63,9 +65,9 @@ function criarCarrossel(produtos, idContainer) {
   }
 }
 
-// Adiciona ao carrinho procurando em todas as listas
+// Função que adiciona um produto ao carrinho no localStorage
 function adicionarAoCarrinho(nome) {
-  // Procura o produto pelo nome em todas as listas
+  // Busca o produto pelo nome em todas as listas
   const produto =
     produtosLinha1.find(p => p.nome === nome) ||
     produtosLinha2.find(p => p.nome === nome) ||
@@ -74,25 +76,25 @@ function adicionarAoCarrinho(nome) {
   if (produto) {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-    // Verifica se o produto já existe no carrinho (comparando pelo nome)
+    // Verifica se o produto já está no carrinho
     const itemExistente = carrinho.find(item => item.produto.nome === produto.nome);
 
     if (itemExistente) {
-      // Se existe, só aumenta a quantidade
+      // Se estiver, incrementa a quantidade
       itemExistente.quantidade++;
     } else {
-      // Se não existe, adiciona novo com quantidade 1
+      // Se não, adiciona o produto com quantidade 1
       carrinho.push({ produto, quantidade: 1 });
     }
 
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    alert(`🍬 ${produto.nome} adicionado ao carrinho!`);
+    alert(`${produto.nome} adicionado ao carrinho!`);
   } else {
     alert("Produto não encontrado.");
   }
 }
 
-// Inicializa os carrosséis após o carregamento da página
+// Inicializa os carrosséis quando a página for carregada
 document.addEventListener("DOMContentLoaded", () => {
   criarCarrossel(produtosLinha1, "produtos-carousel-1");
   criarCarrossel(produtosLinha2, "produtos-carousel-2");

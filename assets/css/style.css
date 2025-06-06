@@ -1,3 +1,6 @@
+/* =====================
+   Estilos base do corpo
+====================== */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fafafa;
@@ -6,6 +9,9 @@ body {
   padding: 0;
 }
 
+/* =====================
+   Topbar (barra superior)
+====================== */
 .topbar {
   background-color: #e85d75;
   color: white;
@@ -20,6 +26,9 @@ body {
   font-size: 1.8rem;
 }
 
+/* =====================
+   Menu de navegação
+====================== */
 .menu a {
   color: white;
   text-decoration: none;
@@ -34,6 +43,9 @@ body {
   outline: none;
 }
 
+/* =====================
+   Cartões de produtos
+====================== */
 .produto-card {
   background-color: white;
   border-radius: 12px;
@@ -73,6 +85,9 @@ body {
   font-size: 1.1rem;
 }
 
+/* =====================
+   Botão adicionar produto
+====================== */
 .btn-adicionar {
   background-color: #e85d75;
   border: none;
@@ -90,6 +105,9 @@ body {
   outline: none;
 }
 
+/* =====================
+   Rodapé
+====================== */
 .ro dape {
   background-color: #e85d75;
   color: white;
@@ -100,12 +118,16 @@ body {
   font-size: 1rem;
 }
 
-/* Botão limpar carrinho */
+/* =====================
+   Botão limpar carrinho
+====================== */
 #btn-limpar {
   border-radius: 8px;
 }
 
-/* Seta rosa para o carrossel */
+/* =====================
+   Estilos do carrossel (setas)
+====================== */
 .seta-rosa .carousel-control-prev-icon,
 .seta-rosa .carousel-control-next-icon {
   background-color: #e85d75;
@@ -113,7 +135,9 @@ body {
   padding: 10px;
 }
 
-/* Acessibilidade */
+/* =====================
+   Foco para acessibilidade
+====================== */
 .menu a:focus-visible,
 .btn-adicionar:focus-visible,
 #btn-limpar:focus-visible {
@@ -121,8 +145,9 @@ body {
   outline-offset: 2px;
 }
 
-/* Estilo para o carrinho com imagens e controle de quantidade */
-
+/* =====================
+   Estilos do carrinho com imagens e controle de quantidade
+====================== */
 .item-carrinho {
   display: flex;
   align-items: center;
@@ -192,6 +217,9 @@ body {
   outline: none;
 }
 
+/* =====================
+   Validação dos formulários
+====================== */
 .was-validated .form-control:invalid {
   border-color: #dc3545;
 }
@@ -202,4 +230,79 @@ body {
 
 .form-control {
   transition: border-color 0.3s ease;
+}
+
+/* =====================
+   Regras responsivas para telas pequenas e médias
+====================== */
+
+/* Mobile phones (até 600px) */
+@media (max-width: 600px) {
+  /* Topbar empilhada e espaçada */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  /* Logo menor e centralizado */
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  /* Menu alinhado verticalmente e sem margem entre links */
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .menu a {
+    margin: 0.3rem 0;
+  }
+
+  /* Cards com largura total e altura automática */
+  .produto-card {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  /* Imagens dos produtos maior em mobile */
+  .produto-card img {
+    height: 180px;
+  }
+
+  /* Carrinho em coluna para melhor visualização */
+  .item-carrinho {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  /* Controle de quantidade e botões com mais espaço */
+  .quantidade-controle {
+    gap: 1rem;
+  }
+}
+
+/* Tablets (de 601px até 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  /* Topbar com menos padding para economizar espaço */
+  .topbar {
+    padding: 1rem 1.5rem;
+  }
+
+  /* Cards com largura maior para aproveitar o espaço */
+  .produto-card {
+    max-width: 140px;
+  }
+}
+
+/* Desktop (a partir de 901px) */
+@media (min-width: 901px) {
+  /* Cards com largura fixa para visualização consistente */
+  .produto-card {
+    max-width: 180px;
+  }
 }
